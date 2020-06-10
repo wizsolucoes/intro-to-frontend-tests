@@ -1,9 +1,13 @@
 const { generateText, createElement, validateInput } = require("./util");
+const { printTitle } = require("./data.service");
 
 const initApp = () => {
-  // Initializes the app, registers the button click listener
+  // Initializes the app, registers the button click listeners
   const newUserButton = document.querySelector("#btnAddUser");
   newUserButton.addEventListener("click", addUser);
+
+  const loadDataButton = document.querySelector("#btnLoadData");
+  loadDataButton.addEventListener("click", printTitle);
 };
 
 const addUser = () => {
